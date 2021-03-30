@@ -3,7 +3,7 @@
 void firstFit(int userInputs[10], int memParts[12])
 {
     int count = 0;
-    int leftOver[10]= {0};
+    int leftOver[10] = {0};
     int memoryPartitions[12];
     bool notAllocated = false;
     // Clone memory partitions array to be used in this function
@@ -34,12 +34,15 @@ void firstFit(int userInputs[10], int memParts[12])
         }
     }
     printf("\n\n");
-    for (int i = 0; i < 10; i ++){
-        if(leftOver[i] > 0){
-            printf("Process %d(%dKB), ", i+1, leftOver[i]);
+    if (notAllocated)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            if (leftOver[i] > 0)
+            {
+                printf("Process %d(%dKB), ", i + 1, leftOver[i]);
+            }
         }
-    }
-    if(notAllocated){
         printf("has not been allocated due to insufficient hole size.");
     }
     printf("\nMemory Partition Left = ");
@@ -52,7 +55,7 @@ void firstFit(int userInputs[10], int memParts[12])
 
 void bestFit(int userInputs[10], int memParts[12])
 {
-    int leftOver[10]= {0};
+    int leftOver[10] = {0};
     int count = 0;
     int memoryPartitions[12];
     bool notAllocated = false;
@@ -99,12 +102,16 @@ void bestFit(int userInputs[10], int memParts[12])
         }
     }
     printf("\n\n");
-    for (int i = 0; i < 10; i ++){
-        if(leftOver[i] > 0){
-            printf("Process %d(%dKB), ", i+1, leftOver[i]);
+
+    if (notAllocated)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            if (leftOver[i] > 0)
+            {
+                printf("Process %d(%dKB), ", i + 1, leftOver[i]);
+            }
         }
-    }
-    if(notAllocated){
         printf("has not been allocated due to insufficient hole size.");
     }
     printf("\nMemory Partition Left = ");
@@ -117,7 +124,7 @@ void bestFit(int userInputs[10], int memParts[12])
 
 void worstFit(int userInputs[10], int memParts[12])
 {
-    int leftOver[10]= {0};
+    int leftOver[10] = {0};
     int count = 0;
     int memoryPartitions[12];
     bool notAllocated = false;
@@ -164,12 +171,16 @@ void worstFit(int userInputs[10], int memParts[12])
         }
     }
     printf("\n\n");
-    for (int i = 0; i < 10; i ++){
-        if(leftOver[i] > 0){
-            printf("Process %d(%dKB), ", i+1, leftOver[i]);
+
+    if (notAllocated)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            if (leftOver[i] > 0)
+            {
+                printf("Process %d(%dKB), ", i + 1, leftOver[i]);
+            }
         }
-    }
-    if(notAllocated){
         printf("has not been allocated due to insufficient hole size.");
     }
     printf("\nMemory Partition Left = ");
