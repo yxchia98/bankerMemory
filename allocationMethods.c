@@ -16,10 +16,10 @@ void firstFit(int userInputs[10], int memParts[12])
     {
         for (int n = 0; n < 12; n++)
         {
-            if (userInputs[i] <= memoryPartitions[n]) // insert in memory partition
+            if (userInputs[i] <= memoryPartitions[n]) // insert in memory partition if hole is bigger than process size
             {
                 printf("\nInput process %d(%dKB) is added in Memory Partition %d(%dKB)", i + 1, userInputs[i], n + 1, memoryPartitions[n]);
-                memoryPartitions[n] -= userInputs[i];
+                memoryPartitions[n] -= userInputs[i];   // get resultant hole
                 printf("\nMemory Partition %d left %d", n + 1, memoryPartitions[n]);
                 break;
             }
@@ -34,6 +34,7 @@ void firstFit(int userInputs[10], int memParts[12])
         }
     }
     printf("\n\n");
+    // If there is processes not allocated, print out these processes
     if (notAllocated)
     {
         for (int i = 0; i < 10; i++)
@@ -45,6 +46,7 @@ void firstFit(int userInputs[10], int memParts[12])
         }
         printf("has not been allocated due to insufficient hole size.");
     }
+    // Print out resultant holes of memory parititons.
     printf("\nMemory Partition Left = ");
     for (int i = 0; i < 12; i++)
         printf("| %d ", memoryPartitions[i]);
@@ -103,7 +105,7 @@ void bestFit(int userInputs[10], int memParts[12])
         }
     }
     printf("\n\n");
-
+    // If there is processes not allocated, print out these processes
     if (notAllocated)
     {
         for (int i = 0; i < 10; i++)
@@ -115,6 +117,7 @@ void bestFit(int userInputs[10], int memParts[12])
         }
         printf("has not been allocated due to insufficient hole size.");
     }
+    // Print out resulting memory partition after algorithm
     printf("\nMemory Partition Left = ");
     for (int i = 0; i < 12; i++)
         printf("| %d ", memoryPartitions[i]);
@@ -173,7 +176,7 @@ void worstFit(int userInputs[10], int memParts[12])
         }
     }
     printf("\n\n");
-
+    // If there are processes not allocated to a partiiton, print these processes out
     if (notAllocated)
     {
         for (int i = 0; i < 10; i++)
@@ -185,6 +188,7 @@ void worstFit(int userInputs[10], int memParts[12])
         }
         printf("has not been allocated due to insufficient hole size.");
     }
+    // Print out resultant holes of memory partitions
     printf("\nMemory Partition Left = ");
     for (int i = 0; i < 12; i++)
         printf("| %d ", memoryPartitions[i]);
