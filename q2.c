@@ -25,6 +25,11 @@ int main()
             largest = memoryPartitions[i];
         }
     }
+    printf("\n\nExisting memory partitions: |");
+    for (int i = 0; i < 12; i++){
+        printf("%d|", memoryPartitions[i]);
+    }
+    printf("\n\n");
     printf("Enter processeses, splitted by a commas. Processes entered cannot exceed %dKB size.\nEnter processses(KB):", largest);
     fgets(str, 100, stdin);
     // printf("Input String is %s", str);

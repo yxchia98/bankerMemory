@@ -88,7 +88,7 @@ int main()
         }
     }
 
-    // Banker’s algorithm
+    // Bankerï¿½s algorithm
     // Loop through all 6 process needs
     for (int i=0;i<6;i++)
     {

@@ -48,9 +48,10 @@ void firstFit(int userInputs[10], int memParts[12])
     printf("\nMemory Partition Left = ");
     for (int i = 0; i < 12; i++)
         printf("| %d ", memoryPartitions[i]);
+    printf("|");
     printf("\nEnter any key to continue...");
     scanf("%s");
-    printf("|\n\n");
+    printf("\n\n");
 }
 
 void bestFit(int userInputs[10], int memParts[12])
@@ -117,9 +118,10 @@ void bestFit(int userInputs[10], int memParts[12])
     printf("\nMemory Partition Left = ");
     for (int i = 0; i < 12; i++)
         printf("| %d ", memoryPartitions[i]);
+    printf("|");
     printf("\nEnter any key to continue...");
     scanf("%s");
-    printf("|\n\n");
+    printf("\n\n");
 }
 
 void worstFit(int userInputs[10], int memParts[12])
@@ -186,7 +188,8 @@ void worstFit(int userInputs[10], int memParts[12])
     printf("\nMemory Partition Left = ");
     for (int i = 0; i < 12; i++)
         printf("| %d ", memoryPartitions[i]);
+    printf("|");
     printf("\nEnter any key to continue...");
     scanf("%s");
-    printf("|\n\n");
+    printf("\n\n");
 }
