@@ -66,17 +66,14 @@ int main()
         // Go to firstFit algorithm
             firstFit(userInputs, memoryPartitions);
             break;
-
         case 2:
         // Go to bestFit algorithm
             bestFit(userInputs, memoryPartitions);
             break;
-
         case 3:
         // Go to worstFit algorithm
             worstFit(userInputs, memoryPartitions);
             break;
-
         default:
         // exit out of main menu, and terminate program.
             proceed = false;
